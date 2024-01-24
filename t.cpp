@@ -13,34 +13,39 @@ int main() {
     
     int choice;
     cin >> choice;
+
+
+
+
    
-    if (choice ==1){
+    if (choice ==2){
         int size;
         cout << "What is the size of the hot air balloon? ";
         cin >> size;
-                // Display balloon
-        cout << setw(4*size) << "____" << endl;
-        cout << setw(3*size) << "/" << setw(3*size) << "\\" << endl;
-        cout << setw(2*size) << "/" << setw(5*size) << "\\" << endl;
+        // Display balloon
 
+        // Top balloon
+        cout << setw(3*size) << "____" << endl;
+        cout << setw(size) << "/" << setw(3*size) << "\\" << endl;
+        cout << setw(size-1) << "/" << setw(4*size) << "\\" << endl;
         // Display vertical sections
         for (int i = 0; i < 2*size; ++i) {
             cout << "|";
-            cout << setw(2*size - 1) << " ";
+            cout << setw(4*size - 1) << " ";
             cout << "|" << endl;
         }
 
-        cout << "\\" << setw(5*size) << "/" << endl;
+        cout << "\\" << setw(4*size) << "/" << endl;
         cout << " \\" << setw(3*size) << "/" << endl;
 
         // Display bottom of the balloon
-        cout << setw(4*size) << "====" << endl;
+        cout << setw(3*size) << "====" << endl;
 
         // Display connection between balloon and basket
         cout << setw(3*size) << "\\||/" << endl;
-        cout << setw(4*size) << "||" << endl;
-        cout << setw(4*size) << "####" << endl;
-        cout << setw(4*size) << "####" << endl;
+        cout << setw(2.5*size) << "||" << endl;
+        cout << setw(3*size) << "####" << endl;
+        cout << setw(3*size) << "####" << endl;
     }
 
     return 0;
