@@ -20,8 +20,14 @@ int main() {
     cin >> choice;
 
     if (choice == 1) {
-        // Simulate rolling a fair six-sided dice and get a random number between 1 and 6
-        // There still a possiblity 8 appear, I many ways could solve it
+        // Simulate rolling a fair six-sided dice and get a random number (should be) between 1 and 6
+        // dice/domino? face appear from (2-8), there should be 1-6 dice face
+        //ASCII art
+        // +---+
+        // | o |    
+        // |   |
+        // | o |
+        // +---+ 
         int userNumber = rand() % 6 + 1;
 
         // Display dice based on the random number
@@ -70,8 +76,31 @@ int main() {
         if (size < 2) {
             cout << "Invalid size. Size must be 2 or greater." << endl;
         } else {
-            // Display Hot Air Balloon based on user's input size
-            // ... (Your code for the hot air balloon goes here)
+        // Display balloon
+
+        // Top balloon
+        cout << setw(3*size) << "____" << endl;
+        cout << setw(size) << "/" << setw(2.5*size) << "\\" << endl;
+        cout << setw(size-1) << "/" << setw(3.5*size) << "\\" << endl;
+        // Display vertical sections
+        for (int i = 0; i < 2*size; ++i) {
+            cout << "|";
+            cout << setw(4*size - 1) << " ";
+            cout << "|" << endl;
+        }
+
+        cout << "\\" << setw(4*size) << "/" << endl;
+        cout << " \\" << setw(3*size) << "/" << endl;
+
+        // Display bottom of the balloon
+        cout << setw(3*size) << "====" << endl;
+
+        // Display connection between balloon and basket
+        cout << setw(3*size) << "\\||/" << endl;
+        cout << setw(2.5*size)<<"||" << endl;
+        cout << setw(3*size) << "####" << endl;
+        cout << setw(3*size) << "####" << endl;
+
         }
     } else {
         cout << "Invalid choice. Please enter 1 or 2." << endl;
